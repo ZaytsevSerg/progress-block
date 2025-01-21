@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Progress Bar</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="progress-section">
+				<div class="progress">
+					<div class="progress-circle">
+						<div class="progress-inner-circle"></div>
+					</div>
+				</div>
+			</div>
+			<div class="controls-section">
+				<div class="value-container">
+					<input type="number" id="valueInput" min="0" max="100" />
+					<label>Value</label>
+				</div>
+				<div class="toggle-container">
+					<div class="toggle-button" id="animateToggle"></div>
+					<label>Animate</label>
+				</div>
+				<div class="toggle-container">
+					<div class="toggle-button" id="hideToggle"></div>
+					<label>Hide</label>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>

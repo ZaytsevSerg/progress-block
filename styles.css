@@ -1,0 +1,122 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	margin: 0;
+	background: #f5f8fc;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	gap: 60px;
+	width: 80%;
+	max-width: 800px;
+	justify-content: center;
+}
+
+.progress-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.progress {
+	position: relative;
+	width: 160px;
+	height: 160px;
+}
+
+.progress-circle {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background: conic-gradient(#e4e8ed 0% 100%, #e4e8ed 100%);
+	transition: background 0.3s ease;
+}
+
+.progress-inner-circle {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	width: 120px;
+	height: 120px;
+	background: white;
+	border-radius: 50%;
+}
+
+.controls-section {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.value-container {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.value-container input[type='number'] {
+	width: 60px;
+	height: 40px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	border: 2px solid black;
+	border-radius: 20px;
+	outline: none;
+}
+
+.toggle-container {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	cursor: pointer;
+}
+
+.toggle-button {
+	position: relative;
+	width: 50px;
+	height: 30px;
+	background: #e4e8ed;
+	border-radius: 15px;
+	transition: background 0.3s ease;
+}
+
+.toggle-button::after {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 24px;
+	height: 24px;
+	background: white;
+	border-radius: 50%;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	transition: left 0.3s ease;
+}
+
+.toggle-button.active {
+	background: #007bff;
+}
+
+.toggle-button.active::after {
+	left: 23px;
+}
+
+@media screen and (max-width: 568px) {
+	.container {
+		flex-direction: column;
+		gap: 20px;
+	}
+}
